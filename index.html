@@ -1,15 +1,188 @@
+<!DOCTYPE html>
 <html>
+ <head>
+   <title>Lactofm</title>
+   <meta charset="utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/styleplayer.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/play.js"></script>
+	<script src="/js/player.js"></script></center>
+	
+	<link href="http://78.155.217.167:8080/media/static/css/widget-status.css" rel="stylesheet">
+	
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+     $( document ).ready(function() {
+         function updateTrack(){
+             $.ajax({
+                 // Дополнительно передается два параметра
+                 // callback & format для получения данных
+                 // в формате JSONP. Это позволит преодолеть CORS ограничение
+                 url: "http://78.155.217.167:8080/api/history/?server=1&limit=1&callback=callback&format=jsonp",
+                 jsonp: "callback",
+                 dataType: "jsonp",
+                 method: "GET",
+                 success: function( response ) {
+                     var trackTitlte = response.objects[0].metadata;
+                     $("#track").text(trackTitlte);
+                 }
+             });
+         }
+         updateTrack();
+         setInterval(updateTrack, 5*1000);
+     });
+    </script>
+	<script>
+     $( document ).ready(function() {
+ function updateTrack(){
+             $.ajax({
+                 // Дополнительно передается два параметра
+                 // callback & format для получения данных
+                 // в формате JSONP. Это позволит преодолеть CORS ограничение
+                 url: "http://78.155.217.167:8080/api/channels/?server=1&callback=callback&format=jsonp",
+                 jsonp: "callback",
+                 dataType: "jsonp",
+                 method: "GET",
+                 success: function( response ) {
+                     var listenersTitlte = response.objects[0].listeners_air;
+                     $("#listeners").text(listenersTitlte);
+                 }
+             });
+         }
+         updateTrack();
+         setInterval(updateTrack, 5*1000);
+     });
+    </script>
+	
+ </head>
+ <body>
+ 
+ <div class="body">
+ 
+	<div class="content">
+		<div  id="news" class="page">
+			<div class="soc">
+				<!-- <center><a href="http://vk.com/lactofm"><img src="img/vk.png"></a></center> -->
+			</div>
+			<!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="101919/"></script> <!-- end feedwind code -->
+			
+		</div>
+		
+		
+		
+		<div  id="home" class="page active"> 
+							<div class="cd"><img src="img/cd.png"></img></div>
+				
+							<div class="music-name"><div class="sc-status-widget">
 
-<head>
-<title>FidayLactose</title>
-<meta http-equiv="refresh" content="6;URL=Game/index.html" />
-</head>
-  <body>
- <center>
-<img src="logo.png" width="80%" height="80%" alt="lorem">
+</div>
+<center>Скоро тут будут подкасты 24/7 :3 </center>
+</div>
+				
+								<div class="player"><button onclick="document.getElementById('player').play(); document.getElementById('stop').style.display='block';document.getElementById('play-play').style.display='none';" id="play-play" class="play">
+				
+									<i class="fa fa-grav" aria-hidden="true"></i>
+									<i class="fa fa-snowflake-o" aria-hidden="true"></i>
+									<i class="fa fa-bomb" aria-hidden="true"></i>
+									<i class="fa fa-cog" aria-hidden="true"></i>
+									<i class="fa fa-globe" aria-hidden="true"></i>
+									<i class="fa fa-life-ring" aria-hidden="true"></i>
+									<i class="fa fa-universal-access" aria-hidden="true"></i>
+									<i class="fa fa-rocket" aria-hidden="true"></i>
+				
+									<i class="fa fa-play normal" aria-hidden="true"></i>
+				
+												</button>
+								
+									<a href="" class="play" id="stop" hidden><i class="fa fa-pause" aria-hidden="true"></i></a>
+								
+										<audio preload="none" id="player" controls hidden>
+											<!-- <source src="http://play.lactofm.ru:8000/radio" type="audio/mpeg"> -->
+										</audio>
+				
+				</div>
+				
+		</div>
+		
+		
+		
+		<div  id="line" class="page">
+		<center>
+		<a id="order" href="#">Тайная кнопка</a> 
+			
+<div class="player">
+<div class="controls">
+<div class="play_pause">
+<div class="play_pause_icon play_pause-play">
+</div>
+</div>
+<div class="navigation">
+<div class="navigation_prev">
+<div class="navigation_prev_icon"></div>
+</div>
+<div class="navigation_next">
+<div class="navigation_next_icon">
+</div>
+</div>
+</div>
+<div class="progress_bar">
+<div class="progress_bar_title">---</div>
+<div class="progress_bar_stripe">
+<div class="progress_bar_container">
+<div class="progress_bar_container_percentage">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="playlist">
+</div>
+</div>
+<script src="./js/player.js"></script></center>
+<br>
+<br>
+<br>
+<br>
+		
+		</div>
+	</div>
+ 
+ </div>
+ <nav class="menu">
+ 
+	<button id="news" class="m-btn"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
+	<button id="home" class="m-btn active"><i class="fa fa-play" aria-hidden="true"></i></button>
+	<button id="line" class="m-btn"><i class="fa fa-podcast" aria-hidden="true"></i>  </button>
+ </nav>
+ 
+ 
+ 
+ <div id="RTWidgetTrackRequests" class="RTWidgetTrackRequests">
 
 
 
- <center>
-  </body>
+
+
+
+
+
+
+
+
+</div>
+<div class="RTWidgetTrackRequests2"><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
+ 
+ 
+ 
+
+
+ </body> 
 </html>
