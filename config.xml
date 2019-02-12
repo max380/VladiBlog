@@ -10,7 +10,7 @@
 
         id        = "com.VladiBlog"
 
-        version   = "3">
+        version   = "4">
 
 
 
@@ -133,7 +133,11 @@
     <plugin name="cordova-plugin-vibration" />  -->
 	
 	
+	<plugin name="onesignal-cordova-plugin" spec="^2.4.1" source="npm" />
 
+
+
+	<preference name="android-build-tool" value="gradle" />
 
 
 

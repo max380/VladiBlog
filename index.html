@@ -4,7 +4,11 @@
    <title>Lactofm</title>
    <meta charset="utf-8">
    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	
+	<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+            app.initialize();
+    </script>
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/styleplayer.css">
@@ -14,54 +18,20 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 	<script src="js/menu.js"></script>
 	<script src="js/play.js"></script>
-	<script src="/js/player.js"></script></center>
+	<script src="js/player.js"></script>
 	
-	<link href="http://78.155.217.167:8080/media/static/css/widget-status.css" rel="stylesheet">
-	
+
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script>
-     $( document ).ready(function() {
-         function updateTrack(){
-             $.ajax({
-                 // Дополнительно передается два параметра
-                 // callback & format для получения данных
-                 // в формате JSONP. Это позволит преодолеть CORS ограничение
-                 url: "http://78.155.217.167:8080/api/history/?server=1&limit=1&callback=callback&format=jsonp",
-                 jsonp: "callback",
-                 dataType: "jsonp",
-                 method: "GET",
-                 success: function( response ) {
-                     var trackTitlte = response.objects[0].metadata;
-                     $("#track").text(trackTitlte);
-                 }
-             });
-         }
-         updateTrack();
-         setInterval(updateTrack, 5*1000);
-     });
-    </script>
-	<script>
-     $( document ).ready(function() {
- function updateTrack(){
-             $.ajax({
-                 // Дополнительно передается два параметра
-                 // callback & format для получения данных
-                 // в формате JSONP. Это позволит преодолеть CORS ограничение
-                 url: "http://78.155.217.167:8080/api/channels/?server=1&callback=callback&format=jsonp",
-                 jsonp: "callback",
-                 dataType: "jsonp",
-                 method: "GET",
-                 success: function( response ) {
-                     var listenersTitlte = response.objects[0].listeners_air;
-                     $("#listeners").text(listenersTitlte);
-                 }
-             });
-         }
-         updateTrack();
-         setInterval(updateTrack, 5*1000);
-     });
-    </script>
 	
+	
+
+    
+    <link rel="stylesheet" media="screen" href="podcast/css/mplayer.css"/>
+
+    <script type="text/javascript" src="podcast/js/jquery.js"></script>
+    <script type="text/javascript" src="podcast/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="podcast/js/perfect-scrollbar.jquery.min.js"></script>
+    <script type="text/javascript" src="podcast/js/mplayer.js"></script>
  </head>
  <body>
  
@@ -116,37 +86,153 @@
 		</div>
 		<div  id="line" class="page">
 		<center>
-		<a id="order" href="#">Тайная кнопка</a> 
-			
-<div class="player">
-<div class="controls">
-<div class="play_pause">
-<div class="play_pause_icon play_pause-play">
+		<a class="mplayer__front-btn-playlist" id="order" href="#">Выпуски подкастов</a> 
+			<br>
+			<br>
+			<br>
+<div class="mplayer">
+    <div class="mplayer__front-header">
+        <div class="mplayer__front-header-next-bg"></div>
+        <div class="mplayer__front-header-current-bg"></div>
+
+        <div class="mplayer__cover-art">
+            <img class="mplayer__cover-art-next" src="#" alt="cover art">
+            <img class="mplayer__cover-art-current" src="#" alt="cover art">
+        </div>
+        <div class="mplayer__toolbar">
+            <div class="mplayer__prev"></div>
+            <div class="mplayer__pause"></div>
+            <div class="mplayer__next"></div>
+        </div>
+        <div class="mplayer__front-body">
+            <div class="mplayer__front-row">
+                <div class="mplayer__front-title-wrap">
+                    <div class="mplayer__front-title-track"></div>
+                    <div class="mplayer__front-title-author"></div>
+                </div>
+            </div>
+            <div class="mplayer__front-row">
+                <div class="mplayer__long">
+                    <div class="mplayer__current-time">0:00</div>
+                    <div class="mplayer__long-slider"></div>
+                    <div class="mplayer__all-time"></div>
+                </div>
+            </div>
+            <div class="mplayer__front-row">
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="mplayer__playlist ">
+        <div class="mplayer__playlist-header">
+            <div class="mplayer__playlist-btn-front"></div>
+            <div class="mplayer__playlist-header-title">
+                Все выпуски
+            </div>
+        </div>
+        <div class="mplayer__playlist-body">
+            <div class="mplayer__playlist-body-next-bg"></div>
+            <div class="mplayer__playlist-body-current-bg"></div>
+            <div class="mplayer__playlist-body-inner js-perfect-scrollbar"></div>
+        </div>
+    </div>
 </div>
-</div>
-<div class="navigation">
-<div class="navigation_prev">
-<div class="navigation_prev_icon"></div>
-</div>
-<div class="navigation_next">
-<div class="navigation_next_icon">
-</div>
-</div>
-</div>
-<div class="progress_bar">
-<div class="progress_bar_title">---</div>
-<div class="progress_bar_stripe">
-<div class="progress_bar_container">
-<div class="progress_bar_container_percentage">
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="playlist">
-</div>
-</div>
-<script src="./js/player.js"></script></center>
+
+</center>
+<script type="text/javascript">
+"use strict";
+    $(function () {
+        $('.mplayer').mplayer({
+            'volume': 80,
+            'playlist': [
+
+                {
+                    "title": "Третий выпуск подкаста (нас уже двое)",
+                    "author": "1",
+                    "cover": "podcast/files/covers/1.jpg",
+                    "background": "podcast/files/backgrounds/fon.jpg",
+                    "pfile": "http://s168996.smrtp.ru/media/podcast/1.mp3",
+                    "duration": "232"
+                },
+                {
+                    "title": "Выход Nintendo Switch!",
+                    "author": "2",
+                    "cover": "podcast/files/covers/2.jpg",
+                    "background": "podcast/files/backgrounds/fon.jpg",
+                    "pfile": "http://s168996.smrtp.ru/media/podcast/2.mp3",
+                    "duration": "221"
+                },
+                {
+                    "title": "Ребят, а мы ж так и не представились!",
+                    "author": "3",
+                    "cover": "podcast/files/covers/3.jpg",
+                    "background": "podcast/files/backgrounds/fon.jpg",
+                    "pfile": "http://s168996.smrtp.ru/media/podcast/3.mp3",
+                    "duration": "233"
+                },
+                {
+                    "title": "Google, WebAPK, AliExpress и чуток про большую N",
+                    "author": "4",
+                    "cover": "podcast/files/covers/4.jpg",
+                    "background": "podcast/files/backgrounds/fon.jpg",
+                    "pfile": "http://s168996.smrtp.ru/media/podcast/4.mp3",
+                    "duration": "236"
+                },
+                {
+                    "title": "Don't Let Me Down",
+                    "author": "The Chainsmokers",
+                    "cover": "podcast/files/covers/5.jpg",
+                    "background": "podcast/files/backgrounds/fon.jpg",
+                    "pfile": "http://s168996.smrtp.ru/media/podcast/5.mp3",
+                    "duration": "219"
+                },
+                {
+                    "title": "Mind",
+                    "author": "Skrillex & Diplo",
+                    "cover": "podcast/files/covers/6.jpg",
+                    "background": "podcast/files/backgrounds/fon.jpg",
+                    "pfile": "http://s168996.smrtp.ru/media/podcast/6.mp3",
+                    "duration": "211"
+                },
+                {
+                    "title": "We Don't Talk Anymore",
+                    "author": "Charlie Puth",
+                    "cover": "podcast/files/covers/7.jpg",
+                    "background": "podcast/files/backgrounds/fon.jpg",
+                    "pfile": "http://s168996.smrtp.ru/media/podcast/7.mp3",
+                    "duration": "217"
+                },
+                {
+                    "title": "Chained To The Rhythm",
+                    "author": "Katy Perry",
+                    "cover": "podcast/files/covers/8.jpg",
+                    "background": "podcast/files/backgrounds/fon.jpg",
+                    "pfile": "http://s168996.smrtp.ru/media/podcast/8.mp3",
+                    "duration": "237"
+                },
+                {
+                    "title": "Kamikaze",
+                    "author": "MØ",
+                    "cover": "podcast/files/covers/9.jpg",
+                    "background": "podcast/files/backgrounds/fon.jpg",
+                    "pfile": "http://s168996.smrtp.ru/media/podcast/9.mp3",
+                    "duration": "205"
+                },
+                {
+                    "title": "I Got You",
+                    "author": "Bebe Rexha",
+                    "cover": "podcast/files/covers/10.jpg",
+                    "background": "podcast/files/backgrounds/fon.jpg",
+                    "pfile": "http://s168996.smrtp.ru/media/podcast/10.mp3",
+                    "duration": "191"
+                }
+            ]
+        });
+    });
+
+</script>
 <br>
 <br>
 <br>
