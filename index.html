@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>Lactofm</title>
+   <title>VladiBlog</title>
    <meta charset="utf-8">
    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<script type="text/javascript" src="cordova.js"></script>
@@ -15,14 +15,14 @@
 	
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 	<script src="js/menu.js"></script>
 	<script src="js/play.js"></script>
 	<script src="js/player.js"></script>
+	<script src="js/jquery-2.2.4.min.js"></script>
 	
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	
+    
 	
 
     
@@ -39,9 +39,9 @@
  
 	<div class="content">
 		<div  id="news" class="page">
-			<div class="soc">
-				<!-- <center><a href="http://vk.com/lactofm"><img src="img/vk.png"></a></center> -->
-			</div>
+<!-- 			<div class="soc">
+				<center><a href="http://vk.com/lactofm"><img src="img/vk.png"></a></center>
+			</div> -->
 			<!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="101919/"></script> <!-- end feedwind code -->
 			
 		</div>
@@ -54,7 +54,17 @@
 							<div class="music-name"><div class="sc-status-widget">
 
 </div>
-<center>Скоро тут будут подкасты 24/7 :3 </center>
+<center>
+<script src="https://e-timer.ru/js/etimer.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery(".eTimer").eTimer({
+			etType: 0, etDate: "17.02.2019.20.0", etTitleText: "До запуска этого блока осталось:", etTitleSize: 20, etShowSign: 1, etSep: ":", etFontFamily: "Verdana", etTextColor: "white", etPaddingTB: 10, etPaddingLR: 10, etBackground: "transparent", etBorderSize: 0, etBorderRadius: 2, etBorderColor: "#c71616", etShadow: "inset 0px 0px 0px 0px #d82424", etLastUnit: 4, etNumberFontFamily: "Comic Sans MS", etNumberSize: 20, etNumberColor: "white", etNumberPaddingTB: 2, etNumberPaddingLR: 5, etNumberBackground: "rgba(17, 171, 176, 0.61)", etNumberBorderSize: 0, etNumberBorderRadius: 5, etNumberBorderColor: "white", etNumberShadow: "inset 0px 0px 10px 0px rgba(201, 52, 52, 0.5)"
+		});
+	});
+</script>
+<div class="eTimer"></div>
+</center>
 </div>
 		
 <!-- 								<div class="player"><button onclick="document.getElementById('player').play(); document.getElementById('stop').style.display='block';document.getElementById('play-play').style.display='none';" id="play-play" class="play">
@@ -82,14 +92,17 @@
 				
 		</div> -->
 		
-		<center><img src="img/wait-animation.gif" height="350" width="350"></img></center>
+		<center><img src="img/Power_Button-animated-.gif" height="200" width="200"></img></center>
 		</div>
+		
 		<div  id="line" class="page">
-		<center>
+		
 		<a class="mplayer__front-btn-playlist" id="order" href="#">Выпуски подкастов</a> 
 			<br>
 			<br>
 			<br>
+			<center>
+			
 <div class="mplayer">
     <div class="mplayer__front-header">
         <div class="mplayer__front-header-next-bg"></div>
@@ -159,8 +172,6 @@
  </nav>
  
  
- 
- <div id="RTWidgetTrackRequests" class="RTWidgetTrackRequests">
 
 
 

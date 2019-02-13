@@ -191,13 +191,13 @@ div#cc_recenttracks_lactose {
 }
 
 a#order {
-    padding: 15px;
+    padding: 20px;
     background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(255, 0, 114, 0.59), rgba(255, 0, 7, 0.58)) repeat scroll 0% 0%;
-    font-size: 20px;
+    font-size: 25px;
     color: white;
     margin-top: 10px;
     margin-left: 5%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border-radius: 2000px;
     position: relative;
     display: inline-block;
