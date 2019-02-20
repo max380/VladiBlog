@@ -187,7 +187,7 @@ jQuery(function ($) {
                         '<div class="col s12 m12 l12 panel">' +
                         '<div class="col s12 m6 l6 image">' +
                         '<img src="' + img + '" class="responsive-img watched">' +
-                        '<div class="watched-text"> В избранном </div></div>' +
+                        '<div class="watched-text">В избранном</div></div>' +
                         '<div class="col s12 m6 l6 title">' +
                         '<div class="col s12 m12 title-video">' + item.title + '</div>' +
                         '<div class="col s12 m12 description-video"><p>' + item.description + '</p>' +
