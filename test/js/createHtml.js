@@ -211,7 +211,7 @@ function showVideo(id) {
 		$('.similar > div').html('' +
 			'<div class="col s12" style="padding: 0px;display: block;"><div class="card" style="background-color: transparent;box-shadow: 0 0 0 0;">' +
 			'<div class="card-image waves-effect waves-block waves-light" style="padding: 0;margin: 0;">' +
-			'<div class="btn-m" data-id="' + id + '"></div><iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>' +
+			'<div class="btn-m" data-id="' + id + '"></div><iframe width="100%" height="205vh" src="https://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>' +
 			'</div></div>' +
 			'<div class="card"><div class="card-content" style="padding: 0 15px 0 15px;">' +
 			'<span class="card-title activator grey-text text-darken-4">' + video.title + '</span>' +

@@ -544,9 +544,9 @@ label {
         padding-bottom: 0;
     }
 }
-@media (min-width: 302px) and (max-width: 520px) {
+@media (min-width: 102px) and (max-width: 620px) {
     .card-image.waves-effect.waves-block.waves-light {
-        height: 200px;
+        height: 100%;
     }
     a.waves-effect.waves-light span{
         display: none;
