@@ -231,7 +231,7 @@ jQuery(function ($) {
     $(document).on({
         click: function (event) {
             var text = $(this).data('text');
-            var link = 'https://www.youtube.com/watch?v=' + $(this).data('link');
+            var link = 'https://www.youtube.com/embed/' + $(this).data('link');
             appsgeyser.ui.shareText('Watch this video!', text + ' ' + link);
         }
     }, ".share-button");
@@ -241,25 +241,28 @@ jQuery(function ($) {
             var id = $(this).data('id');
             $('#back').data('playList','no').parent().show();
             showVideo(id);
+			
         }
     }, ".list");
 
     $(document).on('click', '.btn-m', function () {
+		
         if (!$(this).find('.btn-m').hasClass('disabled')) {
             $(this).find('.circles').addClass('no-circles');
-            $(this).addClass('open-video disabled');
+            $(this).addClass('open-video ');
 
             var id = $('.btn-m').data('id');
             setTimeout(playVideo, 100, id);
 
             setTimeout('$(".btn-m").find(".circles").removeClass("no-circles");$(".btn-m").removeClass("disabled").removeClass("open-video")', 1000);
-        }
+			
+	   }
     });
 
     $(document).on('click', '.card-image.waves-effect.waves-block.waves-light', function () {
         if (!$(this).hasClass('disabled')) {
             $(this).find('.circles').addClass('no-circles');
-            $(this).find('.btn-m').addClass('open-video disabled');
+            $(this).find('.btn-m').addClass('open-video ');
 
             var id = $('.btn-m').data('id');
             setTimeout(playVideo, 100, id);

@@ -16,7 +16,7 @@
         VERSION = '1.5.3',
         // internal storage for language config files
         languages = {},
-        currentLanguage = 'ru',
+        currentLanguage = 'en',
         zeroFormat = null,
         defaultFormat = '0,0',
         // check for nodeJS

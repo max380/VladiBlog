@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="settings.js"></script>
+</head>
+<body>
+<script>
+    function finalize(){
+        NotificationInterface.close();
+    }
+
+    console.log($);
+    console.log("checker started");
+
+    console.log('keepAlive' in NotificationInterface);
+    if('keepAlive' in NotificationInterface) NotificationInterface.keepAlive();
+    console.log(!NotificationInterface.isAppRunning());
+    if(!NotificationInterface.isAppRunning()) {
+        var apiKeys = ['AIzaSyC7Sxnjmy-557cICuoyFtLf1rXl5wWH4Uc',
+            'AIzaSyC7Sxnjmy-557cICuoyFtLf1rXl5wWH4Uc',
+            'AIzaSyAvjsAmcLANJSnm3sNfOJya-YH4_a1V0CQ',
+            'AIzaSyA5vtGnh94IspnpqlB6Rn7_vOX3eu3BJRA',
+            'AIzaSyCPwD_Y7FiQno4dbw_f-nNaHHVqGYLjhpU'];
+
+        var apiKey = apiKeys[Math.floor(Math.random() * apiKeys.length)],
+                id = NotificationInterface.getItem('idChannel');
+
+        $.get('https://www.googleapis.com/youtube/v3/search', {
+                    part: 'snippet',
+                    maxResults: 10,
+                    order: 'date',
+                    channelId: id,
+                    type: 'video',
+                    key: apiKey
+                },
+                function (data) {
+                    if (data.items.length > 0) {
+
+                        var lastPostTime = NotificationInterface.getItem('lastPostTime');
+
+                        console.log("checker last post: " + lastPostTime + "; Currently checked time: " + data.items[0].snippet.publishedAt);
+
+                        if (lastPostTime !== data.items[0].snippet.publishedAt) {
+                            NotificationInterface.setItem('lastPostTime', data.items[0].snippet.publishedAt);
+
+                            var tbUrl;
+                            var url;
+                            NotificationInterface.showNotification(
+                                    data.items[0].snippet.title,
+                                    data.items[0].snippet.description,
+                                    'http://www.youtube.com/watch?v=' + data.items[0].id.videoId,
+                                    "true",
+                                    data.items[0].snippet.thumbnails.high['url'],
+                                    data.items[0].snippet.thumbnails.default['url']
+                            );
+                            finalize();
+                        }
+                    }
+                    finalize();
+                }
+        );
+        }
+    String.prototype.stripTags = function() {
+        return this.replace(/<\/?[^>]+>/g, '');
+    };
+</script>
+</body>
+</html>

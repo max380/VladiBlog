@@ -15,7 +15,7 @@ function createCard(item, id, span_watched, watched, type) {
         '<img src="' + item.snippet.thumbnails.high.url + '" class="responsive-img ' + watched + '">' + span_watched + '</div>' +
         '<div class="col s12 m6 l6 title">' +
         '<div class="col s12 m12 title-video">' + item.snippet.title + '</div>' +
-        '<div class="col s12 m12 description-video"><p>' + item.snippet.description.slice(0, 70) + '...</p></div>' +
+        '<div class="col s12 m12 description-video"><p>' + item.snippet.description.slice(0, 200) + '...</p></div>' +
         '</div></div>' +
         '<div class="row valign-wrapper" style="display: block;margin-bottom: 0;">' +
         '<div class="col s12 m12 content-channel right">' +
@@ -99,10 +99,10 @@ function createHtmlCard(data, nextPage, token, clear) {
                 }
             });
         } else {
-            $('#favorites').html('<h5 style="line-height: 40px;" class="center">Tap "favorite" button to add post to favorites</h5>');
+            $('#favorites').html('<h5 style="line-height: 40px;" class="center">У вас еще нет избранных видео</h5>');
         }
     } else {
-        $('#favorites').html('<h5 style="line-height: 40px;" class="center">Tap "favorite" button to add post to favorites</h5>');
+        $('#favorites').html('<h5 style="line-height: 40px;" class="center">У вас еще нет избранных видео</h5>');
     }
 
     if ($('.videos-collection').find('div').length !== 0 && clear != false) {
@@ -121,7 +121,7 @@ function createHtmlCard(data, nextPage, token, clear) {
 
         if (jStorageCheck(id, 'all')) {
             watched = 'watched';
-            span_watched = '<div class="watched-text"> Watched </div>';
+            span_watched = '<div class="watched-text"> Просмотрено </div>';
         }
 
         if (jStorageCheck(id, 'wat')) {
@@ -211,14 +211,13 @@ function showVideo(id) {
 		$('.similar > div').html('' +
 			'<div class="col s12" style="padding: 0px;display: block;"><div class="card" style="background-color: transparent;box-shadow: 0 0 0 0;">' +
 			'<div class="card-image waves-effect waves-block waves-light" style="padding: 0;margin: 0;">' +
-			'<div class="btn-m" data-id="' + id + '"><div class="circles"></div> <div class="icon"><i class="material-icons">&#xE037;</i></div></div><img class="activator" src="' + img + '">' +
+			'<div class="btn-m" data-id="' + id + '"></div><iframe width="560" height="315" src="https://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>' +
 			'</div></div>' +
 			'<div class="card"><div class="card-content" style="padding: 0 15px 0 15px;">' +
 			'<span class="card-title activator grey-text text-darken-4">' + video.title + '</span>' +
 			'<hr style="color: #FCFCFC;background-color: white;border-color: #FFFFFF;border-style: outset;">' +
 			'<div class="col s12" style="margin: 15px 0 15px 0;padding-left: 0;padding-right: 0;">' +
 			'<div class="col s6" style="padding-left: 0;">' +
-			'' +
 			'<div class="col s6 left favorite-block" style="padding-left: 0;">' +
 			'<div class="" style="">' +
 			'<a class="waves-effect waves-light favorite-button" data-id="' + id + '" ' +
