@@ -5713,6 +5713,7 @@ small {
       cursor: default; }
   .tabs .indicator {
     position: absolute;
+	border-radius: 50px;
     bottom: 0;
     height: 2px;
     background-color: #f6b2b5;

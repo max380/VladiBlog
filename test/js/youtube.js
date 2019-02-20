@@ -187,7 +187,7 @@ jQuery(function ($) {
                         '<div class="col s12 m12 l12 panel">' +
                         '<div class="col s12 m6 l6 image">' +
                         '<img src="' + img + '" class="responsive-img watched">' +
-                        '<div class="watched-text"> Favorite </div></div>' +
+                        '<div class="watched-text"> В избранном </div></div>' +
                         '<div class="col s12 m6 l6 title">' +
                         '<div class="col s12 m12 title-video">' + item.title + '</div>' +
                         '<div class="col s12 m12 description-video"><p>' + item.description + '</p>' +
@@ -231,7 +231,7 @@ jQuery(function ($) {
     $(document).on({
         click: function (event) {
             var text = $(this).data('text');
-            var link = 'https://www.youtube.com/embed/' + $(this).data('link');
+            var link = 'https://www.youtube.com/watch?v=' + $(this).data('link');
             appsgeyser.ui.shareText('Watch this video!', text + ' ' + link);
         }
     }, ".share-button");
