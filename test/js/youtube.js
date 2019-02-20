@@ -187,7 +187,7 @@ jQuery(function ($) {
                         '<div class="col s12 m12 l12 panel">' +
                         '<div class="col s12 m6 l6 image">' +
                         '<img src="' + img + '" class="responsive-img watched">' +
-                        '<div class="watched-text">В избранном</div></div>' +
+                        '<div class="watched-text"> В избранном </div></div>' +
                         '<div class="col s12 m6 l6 title">' +
                         '<div class="col s12 m12 title-video">' + item.title + '</div>' +
                         '<div class="col s12 m12 description-video"><p>' + item.description + '</p>' +
@@ -249,12 +249,13 @@ jQuery(function ($) {
 		
         if (!$(this).find('.btn-m').hasClass('disabled')) {
             $(this).find('.circles').addClass('no-circles');
-            $(this).addClass('open-video ');
+            $(this).addClass('ytp-large-play-button ytp-button');
 
             var id = $('.btn-m').data('id');
-            setTimeout(playVideo, 100, id);
+			
+            setTimeout(playVideo, 1, id);
 
-            setTimeout('$(".btn-m").find(".circles").removeClass("no-circles");$(".btn-m").removeClass("disabled").removeClass("open-video")', 1000);
+            setTimeout('$(".btn-m").find(".circles").removeClass("no-circles");$(".btn-m").removeClass("disabled").removeClass("btn-m")', 1);
 			
 	   }
     });
@@ -262,12 +263,13 @@ jQuery(function ($) {
     $(document).on('click', '.card-image.waves-effect.waves-block.waves-light', function () {
         if (!$(this).hasClass('disabled')) {
             $(this).find('.circles').addClass('no-circles');
-            $(this).find('.btn-m').addClass('open-video ');
+            $(this).find('.btn-m').addClass('ytp-large-play-button ytp-button');
 
             var id = $('.btn-m').data('id');
-            setTimeout(playVideo, 100, id);
 
-            setTimeout('$(".btn-m").find(".circles").removeClass("no-circles");$(".btn-m").removeClass("disabled").removeClass("open-video")', 1000);
+            setTimeout(playVideo, 1, id);
+
+            setTimeout('$(".btn-m").find(".circles").removeClass("no-circles");$(".btn-m").removeClass("disabled").removeClass("btn-m")', 1);
         }
     });
 
