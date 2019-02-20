@@ -209,7 +209,7 @@ function showVideo(id) {
 
 
 		$('.similar > div').html('' +
-			'<div class="col s12" style="padding: 0px;display: block;"><div class="card" style="background-color: transparent;box-shadow: 0 0 0 0;">' +
+			'<div class="col s12" style="padding: 0px;display: block;"><div class="card" style="background-color: transparent;box-shadow: 0 0 0 0;">' + '<a href="https://www.youtube.com/watch?v=' + id + ' " target="_blank"><img width="100%" height="100%" src="yt-b.jpg"></a>' +
 			'<div class="card-image waves-effect waves-block waves-light" style="padding: 0;margin: 0;">' +
 			'<div class="btn-m" data-id="' + id + '"></div><iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + id + '" frameborder="0" allow="accelerometer; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
 			'</div></div>' +
