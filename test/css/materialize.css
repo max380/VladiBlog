@@ -5568,14 +5568,16 @@ small {
       height: 170px; }
   .card .card-image {
     position: relative; }
-    .card .card-image img {
+    .card .card-image iframe {
       border-radius: 2px 2px 0 0;
       position: relative;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
-      width: 100%; }
+      width: 100%;
+	 height: 300px;
+	  }
     .card .card-image .card-title {
       position: absolute;
       bottom: 0;
