@@ -181,6 +181,7 @@ nav, .sorting{
     font-size: 2rem !important;
     display: block;
     cursor: pointer;
+	color: white;
 }
 #back-pl {
     font-size: 2rem !important;
