@@ -9,7 +9,7 @@
 .body {
     width: 100vw;
     height: 87vh;
-    margin-bottom: 0vh;
+    margin-bottom: -3vh;
     position: relative;
     z-index: 10;
     overflow: hidden;
