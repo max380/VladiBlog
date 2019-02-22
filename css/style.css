@@ -22,7 +22,7 @@ button:focus {
 }
 
 nav.menu {
-    width: 90vw;
+    width: 100vw;
     height: 18vh;
     padding-top: 7vh;
     background: url(../img/bg2.png);
