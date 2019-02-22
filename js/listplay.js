@@ -9,7 +9,7 @@
                     "author": "1",
                     "cover": "./podcast/files/covers/fon.png",
                     "background": "./podcast/files/backgrounds/fon.jpg",
-                    "pfile": "http://s168996.smrtp.ru/media/podcast/01.mp3",
+                    "pfile": "http://s168 996.smrtp.ru/media/podcast/01.mp3",
                     "duration": ""
                 },
                 {
@@ -69,7 +69,7 @@
                     "duration": ""
                 },
                 {
-                    "title": "Сплиткаст! Самая лучшая игра...",
+                    "title": "Сплиткаст! Самая лучшая игра... ",
                     "author": "9",
                     "cover": "./podcast/files/covers/fon.png",
                     "background": "./podcast/files/backgrounds/fon.jpg",

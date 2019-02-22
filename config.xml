@@ -10,7 +10,7 @@
 
         id        = "com.VladiBlog"
 
-        version   = "11">
+        version   = "12">
 
 
 
@@ -54,7 +54,7 @@
 
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
 
-    <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
+    <preference name="fullscreen"                 value="false" />           <!-- all: hides the status bar at the top of the screen -->
 
     <preference name="webviewbounce"              value="true" />           <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
 

@@ -73,7 +73,7 @@
             jsPlayer.trackCount++;
             jsPlayer.tracks.push({
               'file': tmp.href,
-              'artist': tmp.dataset.artist ? 'by ' + decodeURIComponent(tmp.dataset.artist).replace(/^\s+|\s+$/g, '') : '&nbsp;',
+              'artist': tmp.dataset.artist ? '/* by */' + decodeURIComponent(tmp.dataset.artist).replace(/^\s+|\s+$/g, '') : '&nbsp;',
               'name': decodeURIComponent(tmp.textContent || tmp.innerText).replace(/^\s+|\s+$/g, '')
             });
           }

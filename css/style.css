@@ -1,4 +1,4 @@
-body, p {
+﻿body, p {
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -9,7 +9,7 @@ body, p {
 .body {
     width: 100vw;
     height: 87vh;
-    margin-bottom: -12vh;
+    margin-bottom: 0vh;
     position: relative;
     z-index: 10;
     overflow: hidden;
@@ -24,7 +24,7 @@ button:focus {
 nav.menu {
     width: 100vw;
     height: 18vh;
-    padding-top: 7vh;
+    padding-top: 0vh;
     background: url(../img/bg2.png);
     background-repeat: no-repeat;
     background-size: cover;

@@ -209,10 +209,10 @@ function showVideo(id) {
 
 
 		$('.similar > div').html('' +
-			'<div class="col s12" style="padding: 0px;display: block;"><div class="card" style="background-color: transparent;box-shadow: 0 0 0 0;">' + '<a href="https://www.youtube.com/watch?v=' + id + ' " target="_blank"><img width="100%" height="100%" src="yt-b.jpg"></a>' +
+			'<div class="col s12" style="padding: 0px;display: block;"><div class="card" style="background-color: transparent;box-shadow: 0 0 0 0;">' + '<a href="http://www.youtube.com/watch?v=' + id + ' " target="_blank"><img width="100%" height="100%" src="yt-b.jpg"></a>' +
 			'<div class="card-image waves-effect waves-block waves-light" style="padding: 0;margin: 0;">' +
-			'<div class="btn-m" data-id="' + id + '"></div><iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + id + '?enablejsapi=1&html5=1&showinfo=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" enablejsapi="1" iv_load_policy="3" modestbranding="1" playsinline="1" cc_load_policy="0" controls="2" html5="1" allowfullscreen id="video"></iframe>' +
-			'</div></div><center><a href="https://www.youtube.com/channel/UC0z_sx9DU-gT5GeR-TWS47A?sub_confirmation=1" target="_blank"><img width="200" height="50" src="yt-s.png"></a></center>' +
+			'<div class="btn-m" data-id="' + id + '"></div><iframe width="100%" height="100%" src="http://www.youtube.com/embed/' + id + '?enablejsapi=1&html5=1&showinfo=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" enablejsapi="1" iv_load_policy="3" modestbranding="1" playsinline="1" cc_load_policy="0" controls="2" html5="1" allowfullscreen id="video"></iframe>' +
+			'</div></div><center><a href="http://www.youtube.com/channel/UC0z_sx9DU-gT5GeR-TWS47A?sub_confirmation=1" target="_blank"><img width="200" height="50" src="yt-s.png"></a></center>' +
 			'<div class="card"><div class="card-content" style="padding: 0 15px 0 15px;">' +
 			'<span class="card-title activator grey-text text-darken-4">' + video.title + '</span>' +
 			'<hr style="color: #FCFCFC;background-color: white;border-color: #FFFFFF;border-style: outset;">' +
