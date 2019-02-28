@@ -36,14 +36,18 @@ window.addEventListener(orientationEvent, function() {
       document.getElementById('portrait').style.display = 'none';
       document.getElementById('landscape').style.display = '';
     }
+	else if(window.orientation==180)
+    {
+      document.getElementById('portrait').style.display = 'none';
+      document.getElementById('landscape').style.display = '';
+    }
 }, false);
 </script>
 <meta name="HandheldFriendly" content="true" />
 
 	
  </head>
- <body>
- <div id="landscape" style="width:100%;height:100%;font-size:20px;">Landscape</div>
+ <body id="portrait" style="width:100%;height:100%;font-size:20px;"> 
  <div class="body">
  
 	<div class="content">
@@ -104,7 +108,7 @@ window.addEventListener(orientationEvent, function() {
  </div>
 
 
- <nav id="portrait" style="width:100%;height:100%;font-size:20px;" class="menu">
+ <nav class="menu">
  
 	<button id="news" class="m-btn"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
 	<button id="home" class="m-btn active"><i class="fa fa-play" aria-hidden="true"></i></button>
@@ -126,4 +130,5 @@ window.addEventListener(orientationEvent, function() {
 
 
  </body> 
+ <div id="landscape" style="width:100%;height:100%;font-size:20px;">Поверни экран</div>
 </html>
