@@ -5526,15 +5526,15 @@ small {
   position: relative;
   overflow: hidden;
   margin: 0.5rem 0 1rem 0;
-  background-color: #fff;
-  filter: alpha(Opacity=80);
-  opacity: 0.8; 
+  background-color: rgba(255, 255, 255, 0.8);
   transition: box-shadow .25s;
   border-radius: 2px; }
   .card .card-title {
     color: #fff;
     font-size: 24px;
     font-weight: 300; }
+    filter: alpha(Opacity=80);
+    opacity: 0.8;   }
     .card .card-title.activator {
       cursor: pointer; }
   .card.small, .card.medium, .card.large {
