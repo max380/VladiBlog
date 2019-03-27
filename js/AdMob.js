@@ -84,11 +84,5 @@ if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
 }
 
 
-    // test case for #256, https://github.com/floatinghotpot/cordova-admob-pro/issues/256
 
-    $(document).on('backbutton', function(){
-
-      if(window.confirm('Закрыть приложение?')) navigator.app.exitApp();
-
-    });
 
