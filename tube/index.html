@@ -17,15 +17,32 @@
 
 <body class="full">
 
-<div class="row">
-            <div class="col s2 m1 l1 left back-b" style="display">
+<nav>
+
+        <div class="row">
+            <div class="col s2 m1 l1 left back-b" style="display: none;">
                 <i class="mdi-maps-local-taxi" id="back"></i>
             </div>
+            <div class="col s2 m1 l1 right center" style="padding: 0 10px 0 0" id="opt">
+                
+                    <ul class="sort">
+                        <hr>
+                        <li id="rating" class="sort-li" data-sort="rating">Sort by Rating</li>
+                        <li id="views" class="sort-li" data-sort="viewcount">Sort by views</li>
+                        <li id="date" class="sort-li active" data-sort="date">Sort by date</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="row">
+    <div class="col s12 playlist"></div>
+</div>
 <div class="row main" style="
     margin: 0 auto;
     max-width: 1000px;
 ">
-
 
     <div class="col s12">
         <ul class="tabs col s12 m6 l6" style="width: 100%; opacity: 1;">
