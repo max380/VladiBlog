@@ -133,7 +133,8 @@
     <plugin name="cordova-plugin-vibration" />  -->
 	
 	
-	<plugin name="onesignal-cordova-plugin" spec="^2.4.1" source="npm" />
+	<!-- <plugin name="onesignal-cordova-plugin" spec="^2.4.1" source="npm" /> -->
+	<plugin name="onesignal-cordova-plugin" spec="2.4.1" source="npm" />
     <plugin name="cordova-plugin-splashscreen" />	
 
 	<preference name="LoadUrlTimeoutValue" value="1000000" />
