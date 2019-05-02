@@ -10,7 +10,7 @@
 
         id        = "com.VladiBlog"
 
-        version   = "19">
+        version   = "20">
 
 
 
@@ -135,6 +135,7 @@
 	
 	<!-- <plugin name="onesignal-cordova-plugin" spec="^2.4.1" source="npm" /> -->
 	<plugin name="onesignal-cordova-plugin" spec="2.4.1" source="npm" />
+	<plugin name="cordova-plugin-admobpro" source="npm" />
     <plugin name="cordova-plugin-splashscreen" />	
 
 	<preference name="LoadUrlTimeoutValue" value="1000000" />
